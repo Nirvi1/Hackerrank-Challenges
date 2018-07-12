@@ -10,16 +10,16 @@ public class Solution {
 
     // Complete the arrayManipulation function below.
     static long arrayManipulation(int n, int[][] queries) {
-        long[] arr= new long[n];
-    	Long l=(long) 0;
-    	for (int i=0;i<queries.length;i++)
+        long[] arr  = new long[n];
+    	Long l  =   (long) 0;
+    	for (int i = 0; i < queries.length; i++)
     	{
-    		for(int j=queries[i][0]-1;j<queries[i][1];j++)
+    		for(int j = queries[i][0]-1; j < queries[i][1]; j++)
     		{
-    			arr[j]+=queries[i][2];
+    			arr[j] += queries[i][2];
     		}
         }
-    	for(int i=0;i<n;i++)
+    	for(int i = 0; i < n; i++)
     	{
     		if(l<arr[i])
     			l=arr[i];
